@@ -1,0 +1,94 @@
+{
+	"geode": "5.0.0",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "yourname.auto-decor",
+	"name": "Auto Decor",
+	"version": "v2.0.1",
+	"developer": "yourname",
+	"description": "Adds a Decor button to the editor. It decorates your level with glowing shapes, hanging chains, particles and big background shapes, and sets up a color palette automatically.",
+	"settings": {
+		"palette": {
+			"type": "string",
+			"name": "Palette",
+			"description": "Color scheme used for decoration. Random picks a different one each time.",
+			"default": "Neon",
+			"one-of": [
+				"Neon",
+				"Sunset",
+				"Ocean",
+				"Toxic",
+				"Ember",
+				"Random"
+			]
+		},
+		"color-shift": {
+			"type": "bool",
+			"name": "Color shifts",
+			"description": "Smoothly change to the next palette every few seconds of the level.",
+			"default": true
+		},
+		"color-shift-interval": {
+			"type": "int",
+			"name": "Shift interval (units)",
+			"description": "Distance between palette changes. About 300 units is one second at normal speed.",
+			"default": 1500,
+			"min": 300,
+			"max": 10000
+		},
+		"recolor-bg": {
+			"type": "bool",
+			"name": "Recolor background and ground",
+			"description": "Also adds color triggers for the background, ground and line to match the palette.",
+			"default": true
+		},
+		"shape-ids": {
+			"type": "string",
+			"name": "Shape object IDs",
+			"description": "Comma-separated object IDs used for glowing shapes and particles.",
+			"default": "1,40"
+		},
+		"chain-id": {
+			"type": "int",
+			"name": "Chain object ID",
+			"description": "Object used for hanging chains under platforms. 0 turns chains off.",
+			"default": 41,
+			"min": 0,
+			"max": 5000
+		},
+		"density": {
+			"type": "int",
+			"name": "Edge decor (%)",
+			"description": "How much decoration goes on the edges of your blocks.",
+			"default": 35,
+			"min": 0,
+			"max": 100
+		},
+		"particles": {
+			"type": "int",
+			"name": "Particles (%)",
+			"description": "How many small floating sparkles appear along the level.",
+			"default": 12,
+			"min": 0,
+			"max": 100
+		},
+		"big-shapes": {
+			"type": "bool",
+			"name": "Big background shapes",
+			"description": "Adds large translucent shapes behind the level for depth.",
+			"default": true
+		},
+		"max-objects": {
+			"type": "int",
+			"name": "Max objects per click",
+			"description": "Safety cap so the editor does not lag.",
+			"default": 1500,
+			"min": 50,
+			"max": 10000
+		}
+	}
+}
